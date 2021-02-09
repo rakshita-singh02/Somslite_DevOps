@@ -22,7 +22,7 @@ spec:
     }
   
 stages {
-	/* stage('Build & Unit Test') {
+	 stage('Build & Unit Test') {
 		steps {
 			container('imbjava') {
 				withMaven(maven: 'MAVEN-3.6.3') {
@@ -34,7 +34,7 @@ stages {
 				}
 			}
 		 }
-	} */
+	} 
 	stage('copy_environment_properties'){
 			       steps {
 			                  container('imbjava') {
@@ -79,7 +79,7 @@ stages {
 					withSonarQubeEnv(installationName: 'Sonarqube') {
 						echo 'I am executing code quality using sonarqube'
 						/* sh 'mvn -f sample-java-app/pom.xml sonar:sonar' */
-						sh 'mvn -f sample-java-app/pom.xml clean package'
+						
 						sh 'mvn -f sample-java-app/pom.xml sonar:sonar -Durll=https://sonarqube.sgn.devops.accentureanalytics.com/ -Dsonar.login=sonar_creds'
 					}
 					/* sleep(60)
