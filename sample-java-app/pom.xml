@@ -104,7 +104,7 @@
             </activation>
             <properties>
                 <!-- Optional URL to server. Default value is http://localhost:9000 -->
-                <sonar.host.url>https://sonarqube.sgn.devops.accentureanalytics.com/</sonar.host.url>
+                <host.url>https://sonarqube.sgn.devops.accentureanalytics.com/</host.url>
             </properties>
         </profile>
      </profiles>
