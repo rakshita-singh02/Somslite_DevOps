@@ -72,7 +72,7 @@ stages {
 						  }
 				         }
 			} */
-	/* stage('sonar scan') {
+	 stage('sonar scan') {
 		steps {
 			container('imbjava') {
 				withMaven(maven: 'MAVEN-3.6.3') {
@@ -87,7 +87,7 @@ stages {
 				}
 			}
 		}
-	} */
+	} 
 	stage("Publish Package") {
 		steps {
 			container('imbjava') {
